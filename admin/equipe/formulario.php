@@ -8,7 +8,10 @@
 </head>
 
 <body>
-
+    <?php
+    include "../../conn/conect.php";
+    include "../_inc/menu.php";
+    ?>
     <form action="insert.php" method="post">
         <label for="">Nome </label> <br>
         <input type="text" name="nome" id=""> <br>

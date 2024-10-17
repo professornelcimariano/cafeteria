@@ -22,15 +22,13 @@
     $produto = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($produto) {
     ?>
-
         <div class="container">
             <div class="row">
                     <h1 class="text-center"> <?= $produto['nome'] ?> </h1>
                     <img class="img-fluid" src="img/<?= $produto['imagem'] ?>">
                     <p> <?= $produto['descricao'] ?> </p>                    
             </div>
-        </div>
-    
+        </div>    
     <?php
 
     } else {

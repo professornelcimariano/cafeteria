@@ -9,6 +9,11 @@
 
 <body>
 
+    <?php
+    include "../../conn/conect.php";
+    include "../_inc/menu.php";
+    ?>
+
     <table border="1">
         <?php
         include '../../conn/conect.php';
@@ -25,6 +30,8 @@
                         <th scope="row"><?= $resultado['id'] ?></th>
                         <td><?= $resultado['nome'] ?></td>
                         <td><?= $resultado['descricao'] ?></td>
+                        <td><a href="<?= $base ?>/admin/produtos/formulario_update.php?id=<?= $resultado['id'] ?>"> Editar </a> </td>
+                        <td> <a href="<?= $base ?>/admin/produtos/delete.php?id=<?= $resultado['id'] ?>">  Excluir  </a> </td>
                     </tr>
         <?php
                 }

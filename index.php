@@ -16,7 +16,6 @@
     //Include do menu
     include '_inc/menu.php';
     ?>
-
     <div id="carouselExampleDark" class="carousel carousel-dark slide mb-3">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -51,7 +50,7 @@
             <h2 class="text-center"> Exemplo de Consumo de Dados com col e card </h2>
             <?php
             try {
-                $sql = "SELECT * FROM produtos";
+                $sql = "SELECT * FROM produtos where lancamento = 1 and genero = 0 limit 4";
                 $stmt = $conn->prepare($sql);
                 $stmt->execute();
                 $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -66,8 +65,9 @@
                                     <h5 class="card-title"><?= $resultado['nome'] ?></h5>
                                     <p class="card-text"> <?= $resultado['descricao'] ?> </p>
                                 </div>
-                                <a class="btn btn-primary m-2" href="<?= $base; ?>/single_produto.php?id=<?= $resultado['id'] ?>"> Visitar </a>
-
+                                <a class="btn btn-primary m-2" href="<?= $base; ?>/single_produto.php?id=<?= $resultado['id'] ?>">
+                                    Visitar
+                                </a>
                             </div>
                         </div>
             <?php
@@ -79,8 +79,6 @@
                 echo "Erro na consulta: " . $e->getMessage();
             }
             ?>
-
-
 
         </div>
     </div>

@@ -8,7 +8,10 @@
 </head>
 
 <body>
-
+    <?php
+    include "../../conn/conect.php";
+    include "../_inc/menu.php";
+    ?>
     <table border="1">
         <?php
         include '../../conn/conect.php';

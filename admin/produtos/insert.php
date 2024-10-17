@@ -7,7 +7,7 @@ try {
     $sth->bindValue('nome', $data['nome']);
     $sth->bindValue('descricao', $data['descricao']);
     $sth->execute();
-    //header("Location: ".$base."/admin/produtos/select.php");
+    header("Location: ".$base."/admin/produtos/select.php");
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
