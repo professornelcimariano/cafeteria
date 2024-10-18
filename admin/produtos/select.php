@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <?php
     include "../../conn/conect.php";
     include "../_inc/menu.php";
@@ -31,7 +30,7 @@
                         <td><?= $resultado['nome'] ?></td>
                         <td><?= $resultado['descricao'] ?></td>
                         <td><a href="<?= $base ?>/admin/produtos/formulario_update.php?id=<?= $resultado['id'] ?>"> Editar </a> </td>
-                        <td> <a href="<?= $base ?>/admin/produtos/delete.php?id=<?= $resultado['id'] ?>">  Excluir  </a> </td>
+                        <td><a href="<?= $base ?>/admin/produtos/delete.php?id=<?= $resultado['id'] ?>"> Excluir </a> </td>
                     </tr>
         <?php
                 }
