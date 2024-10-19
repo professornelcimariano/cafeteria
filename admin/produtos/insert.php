@@ -1,6 +1,5 @@
 <?php
 include '../../conn/conect.php';
-
 $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 try {
     $sth = $conn->prepare('insert into produtos (nome, descricao) values (:nome, :descricao)');
